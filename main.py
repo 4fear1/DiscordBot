@@ -7,10 +7,11 @@ from dotenv import load_dotenv  # <-- ADICIONADO
 # CARREGAR VARIÁVEIS DO .env
 # ----------------------------
 load_dotenv()  
-TOKEN = os.getenv("TOKEN")  # <-- LENDO TOKEN DO .env
+TOKEN = os.getenv("DISCORD_TOKEN")  # <-- LENDO TOKEN DO .env
 
 if TOKEN is None:
     raise ValueError("❌ ERRO: Nenhum TOKEN encontrado no arquivo .env!")
+
 
 
 # ----------------------------
