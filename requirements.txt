@@ -1,0 +1,2 @@
+disnake==2.7.2
+aiofiles==23.1.0
