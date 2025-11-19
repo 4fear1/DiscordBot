@@ -3,6 +3,17 @@ from disnake.ext import commands
 import os
 
 # ----------------------------
+# KEEP-ALIVE SERVER (para Render Web Service)
+# ----------------------------
+try:
+    from keep_alive import keep_alive
+    keep_alive()
+except ImportError:
+    print("⚠️ Keep-alive não disponível (Flask não instalado)")
+except Exception as e:
+    print(f"⚠️ Erro ao iniciar keep-alive: {e}")
+
+# ----------------------------
 # CARREGAR TOKEN
 # ----------------------------
 # Tenta carregar .env para desenvolvimento local
